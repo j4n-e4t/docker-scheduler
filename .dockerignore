@@ -1,0 +1,6 @@
+.claude/
+docker-compose.yml
+Dockerfile
+README.md
+.gitignore
+.git/

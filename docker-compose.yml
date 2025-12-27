@@ -1,0 +1,13 @@
+services:
+  docker-start-stop:
+    build: .
+    container_name: docker-start-stop
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      # Global timezone for all scheduled containers
+      # Examples: UTC, America/New_York, Europe/London
+      - TZ=UTC
+      # How often to scan for container changes
+      - POLL_INTERVAL=30s
